@@ -1,0 +1,63 @@
+swagger: '2.0'
+info:
+  title: AddUser
+  version: '1.0'
+  description: This Api is used for adding new user in the system
+host: ess-vip.essentialconnects/api/v1/wsdl/essauth?wsdl
+schemes:
+  - http
+produces:
+  - application/json
+consumes:
+  - application/json
+paths:
+  adduser:
+    parameters: []
+    post:
+      summary: ''
+      operationId: post
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              hash:
+                type: string
+                example: eyJpdiI6IlZNY2NlUWw4TEFtYVhyVW54R0FzdlE9PSIsInZhbHVlIjoiNlFlOXUxdWJ1WWRlUDVWOEJaQlZxa1wvYzJJRlBQQ0RF K1g5ZTFnckNMZHY5M09DUEUwMVdsa21Fd3lOQjE1MzJKZ0dwbmRUdXhIUlNlb2FHbnVpZkxBPT0iLCJtYWMiOiIwNzZiZTkwNGMzYWM3MD U1ZTFiYjA2NWVkYTg3ODMyYTNmYjljYWMyNjEwZjBiYzIzM2I1MGI1NjQxMDljNmZjIn0=
+              email:
+                type: string
+              name_first:
+                type: string
+              name_last:
+                type: string
+              mobile:
+                type: string
+              phone:
+                type: string
+              client_match:
+                type: string
+          examples:
+            example-1:
+              hash: eyJpdiI6IlZNY2NlUWw4TEFtYVhyVW54R0FzdlE9PSIsInZhbHVlIjoiNlFlOXUxdWJ1WWRlUDVWOEJaQlZxa1wvYzJJRlBQQ0RF K1g5ZTFnckNMZHY5M09DUEUwMVdsa21Fd3lOQjE1MzJKZ0dwbmRUdXhIUlNlb2FHbnVpZkxBPT0iLCJtYWMiOiIwNzZiZTkwNGMzYWM3MD U1ZTFiYjA2NWVkYTg3ODMyYTNmYjljYWMyNjEwZjBiYzIzM2I1MGI1NjQxMDljNmZjIn0=
+              email: harlan.grey12@gmail.com
+              name_first: harlan
+              name_last: grey
+              mobile: '0421123456'
+              phone: '04241123456'
+              client_match: 'false'
+      description: Add a user
+      parameters:
+        - in: formData
+          type: string
+          name: email
+          description: user's email
+        - in: formData
+          type: string
+          name: Mobile number
+          description: user's mobile number
+        - in: formData
+          type: string
+          name: crn
+          description: CRN number of user
+definitions: {}
